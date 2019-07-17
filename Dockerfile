@@ -4,7 +4,7 @@ COPY src/ /var/www/
 
 WORKDIR /var/www
 
-RUN npm install
+RUN npm install --production
 
 CMD node server.js
 
