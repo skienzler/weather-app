@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-app
+  labels:
+    app: weather-app
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: weather-app
+  template:
+    metadata:
+      labels:
+        app: weather-app
+    spec:
+      containers:
+      - name: weather-app
+        image: simonkienzler/weather-app:1.0.0
+        ports:
+        - containerPort: 3000
+          name: http
+          protocol: TCP
+        resources:
+          requests:
+            cpu: 20m
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: weather-app
+  namespace: default
+  labels:
+    app: weather-app
+spec:
+  ports:
+  - name: http
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: weather-app
+  type: NodePort
