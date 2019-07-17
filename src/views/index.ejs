@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Test</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="container">
+            <h1>Splendid Temperature Checker</h1>
+            <fieldset>
+                <form action="/" method="post">
+                    <input name="city" type="text" class="ghost-input" placeholder="Enter a City" required>
+                    <input type="submit" class="ghost-button" value="Get Temperature">
+                </form>
+                <% if(weather !== null){ %>
+                <p><strong><%= weather.city %></strong><br /><br />
+                Temperature: <%= weather.temp %> &deg;C</p>
+                <% } %>
+        
+                <% if(error !== null){ %>
+                <p><%= error %></p>
+                <% } %>
+            </fieldset>
+        </div>
+    </div>
+</body>
+
+</html>

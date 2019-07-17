@@ -1,8 +1,10 @@
 FROM node:lts-alpine
 
-COPY . /var/www/
+COPY src/ /var/www/
 
 WORKDIR /var/www
+
+RUN npm install
 
 CMD node server.js
 
