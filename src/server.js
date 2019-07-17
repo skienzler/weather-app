@@ -14,6 +14,12 @@ app.get('/', function (req, res) {
 })
 
 app.post('/', function (req, res) {
+    if(req.body.city == undefined) {
+        res.status(422);
+        res.render('index', { weather: null, error: 'Error, please try again' });
+        return;
+    }
+
     let city = req.body.city;
     let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`
 
@@ -38,3 +44,5 @@ app.post('/', function (req, res) {
 app.listen(3000, function () {
     console.log('Example app listening on port 3000!')
 })
+
+module.exports = app;
