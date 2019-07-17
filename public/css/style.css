@@ -4,9 +4,17 @@
 */
 
 body {
-  width: 800px;
+  background: url("https://images.pexels.com/photos/531756/pexels-photo-531756.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  margin: 0px;
+  padding: 0px;
+}
+
+.page-wrapper {
+  background: rgba(255,255,255,.6);
+  width: 100%;
+  height: 100vh;
   margin: 0 auto;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 .container {
   width: 600px;
@@ -41,8 +49,8 @@ fieldset {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   color: #4b545f;
-  background: #fff;
-  font-family: Open Sans,Verdana;
+  background: rgba(255,255,255,.6);
+  font-family: Montserrat,Verdana;
   padding: 10px 15px;
   margin: 30px 0px;
   -webkit-transition: all 0.1s ease-in-out;
@@ -50,14 +58,16 @@ fieldset {
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  border-bottom: 1px solid transparent;
 }
 .ghost-input:focus {
-  border-bottom:1px solid #ddd;
+  border-bottom:1px solid rgb(14, 172, 0);
 }
 .ghost-button {
-  background-color: rgba(21, 121, 54, 0.452);
-  border:2px solid #ddd;
+  background-color: rgba(21, 121, 54, 0.8);
+  border:0px solid #ddd;
   padding:10px 30px;
+  margin-bottom: 50px;
   width: 100%;
   min-width: 350px;
   -webkit-transition: all 0.1s ease-in-out;
@@ -65,9 +75,8 @@ fieldset {
   -ms-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-}
-.ghost-button:hover {
-  border:2px solid #515151;
+  font-family: 'Montserrat';
+  color: #fff;
 }
 p {
   color: rgb(39, 39, 39);
@@ -75,4 +84,6 @@ p {
 h1 {
   text-align: center;
   font-weight: lighter;
+  margin-top: 0px;
+  padding-top: 30px;
 }
