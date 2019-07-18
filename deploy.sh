@@ -37,7 +37,7 @@ function wait_for_image() {
     while [ $IMAGE_FOUND != true ]
     do
         COUNTER=$((COUNTER + 1))
-        if [ $COUNTER -gt 6 ]
+        if [ $COUNTER -gt 10 ]
         then
             echo "Image $IMAGE:$TAG still doesn't exist. Exiting."
             exit 2
