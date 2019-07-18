@@ -11,7 +11,7 @@ function config() {
     TAG=$PULL_BASE_SHA
 
     # url of the deployment repo
-    REPO=https://github.com/skienzler/weather-app-deployment.git
+    REPO=https://$GIT_USER:$GIT_TOKEN@github.com/skienzler/weather-app-deployment.git
 
     # location of the cloned repo
     REPO_DIR=deployment
